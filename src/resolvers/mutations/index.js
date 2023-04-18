@@ -1,5 +1,9 @@
-const createCoin = require("./createCoin");
-const updateCoin = require("./updateCoin");
-const deleteCoin = require("./deleteCoin");
+const createUser = require("./createUser");
+const createPost = require("./createPost");
+const createComment = require("./createComment");
 
-module.exports = { createCoin, updateCoin, deleteCoin };
+module.exports = {
+  createPost,
+  createUser,
+  createComment,
+};

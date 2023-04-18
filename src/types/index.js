@@ -1,3 +1,3 @@
-const ERC20Coin = require("./coin");
+const UsersPostsComments = require("./typesMain");
 
-module.exports = [ERC20Coin];
+module.exports = [UsersPostsComments];

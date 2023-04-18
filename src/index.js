@@ -12,8 +12,6 @@ const server = new ApolloServer({
   context: { models },
 });
 
-// port: process.env.PORT yet undefined but we will have this variable
-// once we deployed to heroku
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`Server is ready at ${url}`);
 });

@@ -1,36 +1,18 @@
-require("dotenv").config();
-
 const mongoose = require("mongoose");
-
-const DATABASE_URL = process.env.DATABASE_URL;
-console.log("DATABASE_URL", DATABASE_URL);
+require("dotenv").config();
 
 const connectDB = () => {
   mongoose.set("strictQuery", false);
   return mongoose.connect(
-    DATABASE_URL,
+    process.env.DATABASE_URL,
     { useUnifiedTopology: true, useNewUrlParser: true },
     (err) => {
-      if (err) {
-        console.error("Connection to DB failed");
-      } else {
-        console.log("Connection to DB was successful");
-      }
+      err
+        ? console.error("Connection to DB failed")
+        : console.log("Connection to DB OK");
     }
   );
 };
-
-// const connectDB = async () => {
-//   try {
-//     mongoose.set("strictQuery", false);
-//     mongoose.connect(DATABASE_URL);
-//     console.log("Connection to DB was successful");
-//   } catch (error) {
-//     console.error("Connection to DB failed - ", error);
-
-//     process.exit();
-//   }
-// };
 
 const db = mongoose.connection;
 

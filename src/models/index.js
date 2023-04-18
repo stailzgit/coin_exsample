@@ -1,3 +1,5 @@
-const { ERC20Coin } = require("./coin.js");
+const { Post } = require("./post.js");
+const { User } = require("./user.js");
+const { Comment } = require("./comment.js");
 
-module.exports = { ERC20Coin };
+module.exports = { Post, User, Comment };
